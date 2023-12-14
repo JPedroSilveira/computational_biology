@@ -25,6 +25,12 @@ class Distance:
     
     def get_pure_y(self) -> int:
         return self.pure_y
+    
+    def get_min_pure_coordenate(self) -> int:
+        if self.pure_x < self.pure_y:
+            return self.pure_x
+        else:
+            return self.pure_y
 
 class DistanceRow:
     def __init__(self, x: int) -> None:
@@ -124,48 +130,21 @@ def update_distance_matrix(distance_matrix: DistanceMatrix, min_distance: Distan
     new_x = 0
 
     for distance_row in distance_matrix.get_as_list():
-        if distance_row.get_pure_x() != min_distance.get_pure_x() and distance.get_pure_x != min_distance.get_pure_y():
-            new_distance_row = DistanceRow(new_x)
-            new_y = 0
-            for distance in distance_row.get_as_list():
-                if distance.get_pure_x() != min_distance.get_pure_x() and distance.get_pure_y() != min_distance.get_pure_y():
-                    new_distance_row.append(Distance(distance.get_value(), distance.get_deep(), new_x, new_y))
-                    new_y = new_y + 1
-            new_x = new_x + 1
-            new_distance_matrix.append(new_distance_row)
-
-
-    for x in range(len(distance_matrix)):
-        if x != min_distance_pair[0] and x != min_distance_pair[1]:
-            current_row = current_row + 1
-            new_distance_matrix[min_distance_pair[0]][current_row] = (distance_matrix[min_distance_pair[0]][x] + distance_matrix[min_distance_pair[1]][x]) / 2
-        
-
-    new_size = len(distance_matrix) - 1
-
-    new_distance_matrix = np.zeros((new_size, new_size))
-    
-    current_row = 0
-
-    first_column_to_analise = 1
-
-    for x in range(len(distance_matrix)):
-        if x != min_distance_pair[0] and x != min_distance_pair[1]:
-            current_row = current_row + 1
-            current_column = 1 * current_row
-            for y in range(first_column_to_analise, len(distance_matrix)):
-                if y != min_distance_pair[0] and y != min_distance_pair[1]:
-                    current_column = current_column + 1
-                    new_distance_matrix[current_row][current_column] = distance_matrix[x][y]
-
-        first_column_to_analise = first_column_to_analise + 1
-
-    current_row = 0
-
-    for x in range(len(distance_matrix)):
-        if x != min_distance_pair[0] and x != min_distance_pair[1]:
-            current_row = current_row + 1
-            new_distance_matrix[min_distance_pair[0]][current_row] = (distance_matrix[min_distance_pair[0]][x] + distance_matrix[min_distance_pair[1]][x]) / 2
+        new_distance_row = DistanceRow(new_x)
+        new_y = 0
+        first_distance_from_min_distance: Distance = None
+        for distance in distance_row.get_as_list():
+            if distance.get_pure_x() != min_distance.get_pure_x() and distance.get_pure_y() != min_distance.get_pure_y():
+                new_distance_row.append(Distance(distance.get_value(), distance.get_deep(), new_x, new_y))
+                new_y = new_y + 1
+            elif first_distance_from_min_distance == None:
+                first_distance_from_min_distance = distance
+            else:
+                new_distance_value = 0 # TODO Calculate new distance based on first_distance_from_min_distance and distance / 2
+                new_distance_row.append(Distance(new_distance_value, distance.get_deep(), new_x, new_y))
+                new_y = new_y + 1
+        new_x = new_x + 1
+        new_distance_matrix.append(new_distance_row)
     
     return new_distance_matrix
 
