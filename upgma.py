@@ -1,7 +1,6 @@
 import numpy as np
 import string
 from typing import List
-from pylocluster import *
 from newick import loads
 
 pure_distance_matrix = [[0.0000000, 2.2266620, 3.3353841, 3.0926941, 1.8896296, 4.9589915, 4.3943885, 5.4122139],
@@ -139,6 +138,7 @@ class DistanceMatrix:
                 readable_distance_matrix[distance.get_coordinate_y().get_value()][distance.get_coordinate_x().get_value()] = distance.get_value()
 
         print(readable_distance_matrix) 
+        print('\n')
     
     def is_final(self):
         return self.size == 1
@@ -272,20 +272,18 @@ def get_result(distance_matrix: DistanceMatrix) -> str:
 
     return get_label_from_combination(final_distance)
 
-def upgma(pure_distance_matrix: list[list[float]]):
+def upgma(pure_distance_matrix: list[list[float]]) -> str:
     distance_matrix = initilize_distance_matrix(pure_distance_matrix)
-    distance_matrix.print()
-    print('\n')
+    # distance_matrix.print()
 
     while not distance_matrix.is_final():
         distance_matrix = update_distance_matrix(distance_matrix)
-        distance_matrix.print()
-        print('\n')
+        # distance_matrix.print()
 
-    print(get_result(distance_matrix))
+    return get_result(distance_matrix)
 
-upgma(pure_distance_matrix)
+result = upgma(pure_distance_matrix)
 
-nwk = linkage(pure_distance_matrix, taxa=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'], method='upgma')
-'((H:0.86,(F:0.60,G:0.60):0.26):1.49,((C:0.74,(B:0.46,D:0.46):0.29):0.49,(A:0.94,E:0.94):0.29):1.11);'
-print(loads(nwk).ascii_art())
+print(result)
+
+print(loads(result)[0].ascii_art()) 
