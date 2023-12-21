@@ -1,0 +1,43 @@
+# Sequence 1 
+# ID S23EJW3Z01N 
+# Select seq CP054816.1	Bacillus anthracis
+
+# Sequence 2 
+# ID S19J1TEW016
+# Select seq HG530135.1	Clostridium tetani 
+
+# Sequence 3 
+# ID S27DMNAB013
+# Select seq CP048107.1	Escherichia coli 
+
+# Sequence 4 
+# ID S27ERFZR013 
+# Select seq CP054014.1	Mycobacterium tuberculosis
+
+# Sequence 5 
+# ID S27F86UN013
+# Select seq CP034908.2	Pseudomonas aeruginosa
+
+# Sequence 6 
+# ID S2Y84VN001N
+# Select seq CP041005.1	Salmonella enterica
+
+# Sequence 7 
+# ID S2YBXGXC013
+# Select seq CP040998.1	Staphylococcus aureus
+
+# Sequence 8 
+# ID S2YEHKEW016
+# Select seq CP020551.1	Streptococcus pneumoniae
+
+# Sequence 9 
+# ID S2YF7RUG013
+# Select seq CP003902.1	Treponema pallidum
+
+# Sequence 10 
+# ID S3ZKZREW016
+# Select seq CP043554.1	Vibrio cholerae
+
+
+
+

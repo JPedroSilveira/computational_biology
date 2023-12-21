@@ -1,0 +1,39 @@
+# Sequence 1 
+# ID S40EX6E0013
+# Select seq CP053027.1	Streptococcus agalactiae
+
+# Sequence 2 
+# ID S40FKHUW013
+# Select seq CP138342.1	Neisseria gonorrhoeae
+
+# Sequence 3 
+# ID S40GCGP1016
+# Select seq CP104271.1	Mycobacterium tuberculosis
+
+# Sequence 4 
+# ID S40GX5WZ013
+# Select seq CP120017.1	Staphylococcus aureus
+
+# Sequence 5 
+# ID S40J5GF3013
+# Select seq CP139331.1	Treponema pallidum
+
+# Sequence 6 
+# ID S40JWDEJ016
+# Select seq CP054816.1	Bacillus anthracis
+
+# Sequence 7 
+# ID S40KHPD6013
+# Select seq CP045258.1	Yersinia pestis
+
+# Sequence 8 
+# ID S40KZ3VZ013
+# Select seq CP053098.1	Acinetobacter baumannii
+
+# Sequence 9 
+# ID S40MFYP4013
+# Select seq CP139437.1	Pseudomonas aeruginosa
+
+# Sequence 10 
+# ID S40MYU9F016
+# Select seq CP122956.1	Helicobacter pylori 

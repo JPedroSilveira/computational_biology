@@ -1,0 +1,55 @@
+Using a limit of 40000 - took 2297.089728116989 seconds
+
+seq_1 vs seq_2: -4897
+seq_1 vs seq_3: -5617
+seq_1 vs seq_4: -6559
+seq_1 vs seq_5: -6919
+seq_1 vs seq_6: -5254
+seq_1 vs seq_7: -773
+seq_1 vs seq_8: -4197
+seq_1 vs seq_9: -5092
+seq_1 vs seq_10: -5055
+
+seq_2 vs seq_3: -6511
+seq_2 vs seq_4: -9774
+seq_2 vs seq_5: -10262
+seq_2 vs seq_6: -6420
+seq_2 vs seq_7: -3615
+seq_2 vs seq_8: -5092
+seq_2 vs seq_9: -6271
+seq_2 vs seq_10: -6423
+
+seq_3 vs seq_4: -4827
+seq_3 vs seq_5: -4740
+seq_3 vs seq_6: -4919
+seq_3 vs seq_7: -5756
+seq_3 vs seq_8: -6025
+seq_3 vs seq_9: -5042
+seq_3 vs seq_10: -4803
+
+seq_4 vs seq_5: -2262
+seq_4 vs seq_6: -5048
+seq_4 vs seq_7: -7272
+seq_4 vs seq_8: -7623
+seq_4 vs seq_9: -5188
+seq_4 vs seq_10: -4910
+
+seq_5 vs seq_6: -5125
+seq_5 vs seq_7: -8446
+seq_5 vs seq_8: -7998
+seq_5 vs seq_9: -5338
+seq_5 vs seq_10: -4946
+
+seq_6 vs seq_7: -5429
+seq_6 vs seq_8: -6011
+seq_6 vs seq_9: -5078
+seq_6 vs seq_10: -4861
+
+seq_7 vs seq_8: -3502
+seq_7 vs seq_9: -5275
+seq_7 vs seq_10: -5134
+
+seq_8 vs seq_9: -5618
+seq_8 vs seq_10: -5609
+
+seq_9 vs seq_10: -4829

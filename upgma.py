@@ -3,14 +3,16 @@ import string
 from typing import List
 from newick import loads
 
-pure_distance_matrix = [[0.0000000, 2.2266620, 3.3353841, 3.0926941, 1.8896296, 4.9589915, 4.3943885, 5.4122139],
-                   [2.2266620, 0.0000000, 1.1567076, 0.9140176, 1.3807486, 4.4501105, 3.8855074, 4.9033329],
-                   [3.3353841, 1.1567076, 0.0000000, 1.8198296, 2.4894707, 5.5588327, 4.9942296, 6.0120551],
-                   [3.0926941, 0.9140176, 1.8198296, 0.0000000, 2.2467807, 5.3161427, 4.7515396, 5.7693651],
-                   [1.8896296, 1.3807486, 2.4894707, 2.2467807, 0.0000000, 3.3471233, 2.7825202, 3.8003457],
-                   [4.9589915, 4.4501105, 5.5588327, 5.3161427, 3.3471233, 0.0000000, 1.1966232, 2.2144487],
-                   [4.3943885, 3.8855074, 4.9942296, 4.7515396, 2.7825202, 1.1966232, 0.0000000, 1.2176200],
-                   [5.4122139, 4.9033329, 6.0120551, 5.7693651, 3.8003457, 2.2144487, 1.2176200, 0.0000000]]
+pure_distance_matrix = [[0,  4897,  5617,  6559,  6919,  5254,  773,  4197,  5092,  5055],
+                        [ 4897, 0,  6511,  9774,  10262,  6420,  3615,  5092,  6271,  6423],
+                        [ 5617,  6511, 0,  4827,  4740,  4919,  5756,  6025,  5042,  4803],
+                        [ 6559,  9774,  4827, 0,  2262,  5048,  7272,  7623,  5188,  4910],
+                        [ 6919,  10262,  4740,  2262, 0,  5125,  8446,  7998,  5338,  4946],
+                        [ 5254,  6420,  4919,  5048,  5125, 0,  5429,  6011,  5078,  4861],
+                        [ 773,   3615,  5756,  7272,  8446,  5429, 0,  3502,  5275,  5134],
+                        [ 4197,  5092,  6025,  7623,  7998,  6011,  3502, 0,  5618,  5609],
+                        [ 5092,  6271,  5042,  5188,  5338,  5078,  5275,  5618, 0,  4829],
+                        [ 5055,  6423,  4803,  4910,  4946,  4861,  5134,  5609,  4829, 0]]
 
 class Coordinate:
     def __init__(self, label: str, value: int) -> None:
@@ -144,16 +146,16 @@ class DistanceMatrix:
         return self.size == 1
     
 def get_label(index: int):
-    alphabetical_order = list(string.ascii_lowercase)
     index += 1
-    label = ''
-    while index > 0:
-        index -= 1
-        current_index = index % len(alphabetical_order)
-        label = alphabetical_order[current_index] + label
-        index //= len(alphabetical_order)
+    label = 'seq'
+    return label + str(index)
+    #while index > 0:
+    #    index -= 1
+    #    current_index = index % len(alphabetical_order)
+    #    label = alphabetical_order[current_index] + label
+    #    index //= len(alphabetical_order)
 
-    return label.capitalize()
+    # return label.capitalize()
 
 def get_label_from_combination(distance: Distance) -> str:
     labels = [distance.get_coordinate_x().get_label(), distance.get_coordinate_y().get_label()]

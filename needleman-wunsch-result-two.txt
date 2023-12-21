@@ -1,0 +1,53 @@
+seq_1 vs seq_2: -25
+seq_1 vs seq_3: -14
+seq_1 vs seq_4: -16
+seq_1 vs seq_5: -16
+seq_1 vs seq_6: -12
+seq_1 vs seq_7: -24
+seq_1 vs seq_8: -19
+seq_1 vs seq_9: -28
+seq_1 vs seq_10: -10
+
+seq_2 vs seq_3: -18
+seq_2 vs seq_4: -26
+seq_2 vs seq_5: -22
+seq_2 vs seq_6: -23
+seq_2 vs seq_7: -14
+seq_2 vs seq_8: -19
+seq_2 vs seq_9: -9
+seq_2 vs seq_10: -22
+
+seq_3 vs seq_4: -21
+seq_3 vs seq_5: -10
+seq_3 vs seq_6: -15
+seq_3 vs seq_7: -13
+seq_3 vs seq_8: -31
+seq_3 vs seq_9: -5
+seq_3 vs seq_10: -18
+
+seq_4 vs seq_5: -22
+seq_4 vs seq_6: -9
+seq_4 vs seq_7: -16
+seq_4 vs seq_8: -22
+seq_4 vs seq_9: -31
+seq_4 vs seq_10: -12
+
+seq_5 vs seq_6: -16
+seq_5 vs seq_7: -5
+seq_5 vs seq_8: -17
+seq_5 vs seq_9: -3
+seq_5 vs seq_10: -15
+
+seq_6 vs seq_7: -17
+seq_6 vs seq_8: -25
+seq_6 vs seq_9: -23
+seq_6 vs seq_10: -22
+
+seq_7 vs seq_8: -25
+seq_7 vs seq_9: -14
+seq_7 vs seq_10: -14
+
+seq_8 vs seq_9: -33
+seq_8 vs seq_10: -13
+
+seq_9 vs seq_10: -20
